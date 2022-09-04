@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suit 1" duration-ms="28482" started-at="2022-09-02T20:16:33Z" finished-at="2022-09-02T20:17:02Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@73ad2d6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@64bfbc86]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test 1" duration-ms="15433" started-at="2022-09-02T20:16:33Z" finished-at="2022-09-02T20:16:48Z">
+      <class name="Runners._08_TestRunnerParallel_MasterReport">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@73ad2d6]" name="setUpClass" is-config="true" duration-ms="675" started-at="2022-09-02T23:16:33Z" finished-at="2022-09-02T23:16:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6fc6f14e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@73ad2d6]" name="beforeClass" is-config="true" duration-ms="15" started-at="2022-09-02T23:16:34Z" finished-at="2022-09-02T23:16:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@73ad2d6]" name="runScenario" duration-ms="14652" started-at="2022-09-02T23:16:34Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-02T23:16:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@73ad2d6]" name="tearDownClass" is-config="true" duration-ms="89" started-at="2022-09-02T23:16:48Z" finished-at="2022-09-02T23:16:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runners._08_TestRunnerParallel_MasterReport -->
+    </test> <!-- Test 1 -->
+    <test name="Test 2" duration-ms="28482" started-at="2022-09-02T20:16:33Z" finished-at="2022-09-02T20:17:02Z">
+      <class name="Runners._08_TestRunnerParallel_MasterReport">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@64bfbc86]" name="setUpClass" is-config="true" duration-ms="675" started-at="2022-09-02T23:16:33Z" finished-at="2022-09-02T23:16:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5abca1e0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@64bfbc86]" name="beforeClass" is-config="true" duration-ms="15" started-at="2022-09-02T23:16:34Z" finished-at="2022-09-02T23:16:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@64bfbc86]" name="runScenario" duration-ms="27751" started-at="2022-09-02T23:16:34Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-02T23:17:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid username and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners._08_TestRunnerParallel_MasterReport@64bfbc86]" name="tearDownClass" is-config="true" duration-ms="41" started-at="2022-09-02T23:17:01Z" finished-at="2022-09-02T23:17:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runners._08_TestRunnerParallel_MasterReport -->
+    </test> <!-- Test 2 -->
+  </suite> <!-- Suit 1 -->
+</testng-results>
