@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent {
     public LeftNav() {
-        PageFactory.initElements(GWD.getdriver(),this);
+        PageFactory.initElements(GWD.getDriver(),this);
     }
 
     private WebElement myElement;
@@ -45,7 +45,11 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Employees']")
     private WebElement Employees;
 
+    @FindBy(xpath = "//span[text()='School Setup']")
+    private WebElement SchoolSetup;
 
+    @FindBy(xpath = "//span[text()='Departments']")
+    private WebElement SchoolDepartments;
 
     public void findAndClick(String Strelement)
     {
@@ -62,6 +66,10 @@ public class LeftNav extends Parent {
             case "SetupTwo" :myElement=SetupTwo; break;
             case "HRlink" :myElement=HRlink; break;
             case "EmployeeLink" :myElement=Employees; break;
+            case "SchoolSetup" :myElement=SchoolSetup; break;
+            case "SchoolDepartments" :myElement=SchoolDepartments; break;
+
+
         }
 
         clickFunction(myElement);

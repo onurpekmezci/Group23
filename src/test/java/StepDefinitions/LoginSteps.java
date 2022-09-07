@@ -12,14 +12,14 @@ import java.time.Duration;
 public class LoginSteps {
 
     DialogContent dialog = new DialogContent();
-    WebDriverWait wait = new WebDriverWait(GWD.getdriver(), Duration.ofSeconds(30));
+    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 
     @Given("Navigate to basqar")
     public void navigateToBasqar() {
        // System.out.println("Merhaba 11");
 
-        GWD.getdriver().get("https://demo.mersys.io/");
-        GWD.getdriver().manage().window().maximize();
+        GWD.getDriver().get("https://demo.mersys.io/");
+        GWD.getDriver().manage().window().maximize();
     }
 
     @When("Enter username and password and click login button")

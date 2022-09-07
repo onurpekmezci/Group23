@@ -36,24 +36,24 @@ public class Parent {
 
     public void WaitUntilVisible(WebElement element) {
 
-        WebDriverWait wait = new WebDriverWait(GWD.getdriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(element));
 
     }
 
     public void WaitUntilClickable(WebElement element) {
 
-        WebDriverWait wait = new WebDriverWait(GWD.getdriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
 
     public void scrollToElement(WebElement element) {
 
-        JavascriptExecutor js = (JavascriptExecutor) GWD.getdriver();
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
 
-        GWD.getdriver().switchTo().window(GWD.getdriver().getWindowHandle());
+        GWD.getDriver().switchTo().window(GWD.getDriver().getWindowHandle());
     }
 
     public void VerifyContainsText(WebElement element, String text) {
@@ -63,7 +63,7 @@ public class Parent {
     }
 
     public void waitUntilLoading() {
-        WebDriverWait wait = new WebDriverWait(GWD.getdriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
 
