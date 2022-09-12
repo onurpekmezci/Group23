@@ -45,7 +45,6 @@ public class ExcelUtility {
             XSSFSheet sheet = workbook.createSheet("LogOnur");
             Row row = sheet.createRow(0);
 
-
             Cell cell = row.createCell(0);
             cell.setCellValue(scenario.getName());
              cell = row.createCell(1);
@@ -56,12 +55,10 @@ public class ExcelUtility {
             cell.setCellValue(time);
 
             try {
-
                 FileOutputStream outputStream = new FileOutputStream(path);
                 workbook.write(outputStream);
                 workbook.close();
                 outputStream.close();
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -71,10 +68,8 @@ public class ExcelUtility {
             FileInputStream inputStream = null;  // program ile dosya arasında bağlanıtı oluştu.
             Workbook workbook = null;
             try {
-
                 inputStream  = new FileInputStream(path);
                 workbook = WorkbookFactory.create(inputStream);
-
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -120,20 +115,18 @@ public class ExcelUtility {
 
     public static ArrayList<ArrayList<String>> getListData(String path, String sheetname, int columnnumber) {
         //String path = "src/test/java/ApachePOI/resource/LoginData.xlsx";
-        Workbook workbook = null;
 
         ArrayList<ArrayList<String>> result = new ArrayList<>();
+        Workbook workbook = null;
 
         try {
             FileInputStream inputstream = new FileInputStream(path);
             workbook = WorkbookFactory.create(inputstream);
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         Sheet sheet = workbook.getSheet(sheetname);
-
         int rowCOunt = sheet.getPhysicalNumberOfRows();
 
         for (int i = 0; i < rowCOunt; i++) {

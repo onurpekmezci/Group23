@@ -69,7 +69,7 @@ public class GWD {
     }
 
     public static void quitDriver() {
-        Bekle(5);
+        Bekle(3);
 
         if (threadDriver.get() != null) { // driver varsa
             threadDriver.get().quit();

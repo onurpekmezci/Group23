@@ -10,10 +10,8 @@ public class LeftNav extends Parent {
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
-    private WebElement myElement;
-
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
-            private WebElement SetupOne;
+    private WebElement SetupOne;
 
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     private WebElement Countries;
@@ -38,10 +36,17 @@ public class LeftNav extends Parent {
 
     @FindBy(xpath = "(//span[text()='Setup'])[2]")
     private WebElement SetupTwo;
-
+//-------------------------------------------------------------//
     @FindBy(xpath = "//span[text()='Human Resources']")
-    private WebElement HRlink;
+    private WebElement HumanResources;
 
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement setupClick;
+
+    @FindBy(xpath = "(//span[text()='Positions'])[1]")
+    private WebElement positionClick;
+
+//-----------------------------------------------------------//
     @FindBy(xpath = "//span[text()='Employees']")
     private WebElement Employees;
 
@@ -51,10 +56,9 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     private WebElement SchoolDepartments;
 
-    public void findAndClick(String Strelement)
-    {
-        switch (Strelement)
-        {
+    private  WebElement myElement;
+    public void findAndClick(String strElement){
+        switch (strElement){
             case "SetupOne": myElement=SetupOne; break;
             case "Parameters":myElement=Parameters; break;
             case "Countries" :myElement=Countries; break;
@@ -64,16 +68,32 @@ public class LeftNav extends Parent {
             case "EntranceExams1" :myElement=EntranceExams1; break;
             case "EntranceExams2" :myElement=EntranceExams2; break;
             case "SetupTwo" :myElement=SetupTwo; break;
-            case "HRlink" :myElement=HRlink; break;
+            case "HumanResources" :myElement=HumanResources; break;
             case "EmployeeLink" :myElement=Employees; break;
             case "SchoolSetup" :myElement=SchoolSetup; break;
             case "SchoolDepartments" :myElement=SchoolDepartments; break;
-
+            case "setupClick":myElement=setupClick;break;
+            case "positionClick":myElement=positionClick;break;
 
         }
 
         clickFunction(myElement);
     }
 
+    public void findAndSend(String strElement,String value){
+        switch (strElement){
 
+
+        }
+        sendKeysFunction(myElement,value);
+    }
+
+    public void verifyText(String strElement,String text){
+        switch (strElement){
+
+
+
+        }
+        VerifyContainsText(myElement,text);
+    }
 }

@@ -22,8 +22,7 @@ public class Hooks {
     }
 
     @After
-    public void after(Scenario scenario)
-    {
+    public void after(Scenario scenario){
         System.out.println("Senaryo Bitti");
         System.out.println("scenario sonucu="+ scenario.getStatus());
         System.out.println("scenario isFailed ?="+ scenario.isFailed());

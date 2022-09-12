@@ -13,8 +13,6 @@ import java.time.Duration;
 public class Parent {
 
     public void sendKeysFunction(WebElement element, String Value) {
-        // bekleme
-
         WaitUntilVisible(element);
         // elemente kadar kaydırma yap
         scrollToElement(element);
@@ -22,11 +20,9 @@ public class Parent {
         element.clear();
         //değer yolla
         element.sendKeys(Value);
-
     }
 
     public void clickFunction(WebElement element) {
-
         WaitUntilClickable(element);
         // elemente kadar kaydırma yap
         scrollToElement(element);
@@ -35,24 +31,20 @@ public class Parent {
     }
 
     public void WaitUntilVisible(WebElement element) {
-
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(element));
 
     }
 
     public void WaitUntilClickable(WebElement element) {
-
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
 
     public void scrollToElement(WebElement element) {
-
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
-
         GWD.getDriver().switchTo().window(GWD.getDriver().getWindowHandle());
     }
 

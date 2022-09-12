@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test 2</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Sep 02 23:16:33 EET 2022</td>
+<td>Started on:</td><td>Sun Sep 11 14:45:46 TRT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28482 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (346 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,108 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners._08_TestRunnerParallel_MasterReport.runScenario()'><b>runScenario</b><br>Test class: Runners._08_TestRunnerParallel_MasterReport<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid username and password", "Login Functionality"</td>
+<td title='Runners._08_TestRunnerParallel_MasterReport.setUpClass()'><b>setUpClass</b><br>Test class: Runners._08_TestRunnerParallel_MasterReport<br>Parameters: org.testng.TestRunner@22213dfd</td>
+<td><div><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///C:/Users/LENOVO/IdeaProjects/Group23_HuseyinSEVER/src/test/java/FeatureFiles/Huseyin_GIP-5_HumanResources_Add_Edit_Delete.feature
+(3:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Background:&apos;
+(4:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Navigate to basqar&apos;
+(5:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When  Enter username and password and click login button&apos;
+(6:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then  User should login successfuly&apos;
+(8:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Add add position to human resources&apos;
+(10:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Clicking on the relevant menu options&apos;
+(11:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When  Fill in the fields related to adding a position&apos;
+(12:6): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then  Successfully add operation&apos;
+(14:4): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Edit and make necessary adjustments&apos;
+(15:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Clicking on the relevant menu options&apos;
+(16:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Arrangement of first and last names&apos;
+	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:43)
+	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:45)
+	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
+	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2812)
+	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
+	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1066171809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1066171809'><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///C:/Users/LENOVO/IdeaProjects/Group23_HuseyinSEVER/src/test/java/FeatureFiles/Huseyin_GIP-5_HumanResources_Add_Edit_Delete.feature
+(3:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Background:&apos;
+(4:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Navigate to basqar&apos;
+(5:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When  Enter username and password and click login button&apos;
+(6:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then  User should login successfuly&apos;
+(8:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Add add position to human resources&apos;
+(10:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Clicking on the relevant menu options&apos;
+(11:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When  Fill in the fields related to adding a position&apos;
+(12:6): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then  Successfully add operation&apos;
+(14:4): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Edit and make necessary adjustments&apos;
+(15:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Clicking on the relevant menu options&apos;
+(16:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Given Arrangement of first and last names&apos;
+	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:43)
+	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:45)
+	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
+	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
+	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2812)
+	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
+	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:122)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Runners._08_TestRunnerParallel_MasterReport@7a4ccb53</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runners._08_TestRunnerParallel_MasterReport.beforeClass()'><b>beforeClass</b><br>Test class: Runners._08_TestRunnerParallel_MasterReport</td>
 <td></td>
-<td>27</td>
-<td>Runners._08_TestRunnerParallel_MasterReport@64bfbc86</td></tr>
+<td>0</td>
+<td>Runners._08_TestRunnerParallel_MasterReport@7a4ccb53</td></tr>
 </table><p>
 </body>
 </html>
