@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Cucumber_Kursu3" />
+        <module name="Group23_onurdeneme2" />
         <module name="Group23_Staj" />
       </profile>
     </annotationProcessing>
