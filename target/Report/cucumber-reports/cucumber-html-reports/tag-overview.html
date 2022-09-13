@@ -49,32 +49,32 @@ $(document).ready(function() {
   $(document).ready(function() {
 
     var chartData = {
-        labels: ["@Regression","@Smoketest"],
+        labels: ["@Regression"],
         datasets: [
             {
                 label: 'Passed',
                 backgroundColor: "#92DD96",
-                data: [100.00, 100.00]
+                data: [50.00]
             },
             {
                 label: 'Failed',
                 backgroundColor: "#F2928C",
-                data: [0.00, 0.00]
+                data: [0.00]
             },
             {
                 label: 'Skipped',
                 backgroundColor: "#8AF",
-                data: [0.00, 0.00]
+                data: [50.00]
             },
             {
                 label: 'Pending',
                 backgroundColor: "#F5F28F",
-                data: [0.00, 0.00]
+                data: [0.00]
             },
             {
                 label: 'Undefined',
                 backgroundColor: "#F5B975",
-                data: [0.00, 0.00]
+                data: [0.00]
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
           <tr class="info">
             <td>Project Name</td>
                           <td>1</td>
-                        <td>02 Sep 2022, 23:17</td>
+                        <td>08 Sep 2022, 23:39</td>
           </tr>
         </tbody>
       </table>
@@ -195,62 +195,47 @@ $(document).ready(function() {
         <td class="tagname"><a href="Regression.html">@Regression</a></td>
         
         <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
+        <td  class="failed"    >1</td>
+        <td class="total">2</td>
         <td      class="passed"    >3</td>
         <td >0</td>
+        <td     class="skipped"   >3</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td class="duration" data-value="27672000000">27s 672ms</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="Smoketest.html">@Smoketest</a></td>
-        
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-        <td      class="passed"    >3</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">3</td>
-        <td class="duration" data-value="27672000000">27s 672ms</td>
-        <td class="passed">Passed</td>
+        <td class="total">6</td>
+        <td class="duration" data-value="12435000000">12s 435ms</td>
+        <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
+      <td>1</td>
+            <td>1</td>
+      <td>1</td>
       <td>2</td>
-            <td>2</td>
+      <td>3</td>
       <td>0</td>
-      <td>2</td>
-      <td>6</td>
-      <td>0</td>
-      <td>0</td>
+      <td>3</td>
       <td>0</td>
       <td>0</td>
       <td>6</td>
-      <td class="duration">55s 344ms</td>
+      <td class="duration">12s 435ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>100.00%</td>
+            <td>50.00%</td>
+      <td>50.00%</td>
+      <td></td>
+      <td>50.00%</td>
+      <td>0.00%</td>
+      <td>50.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
       <td></td>
-      <td></td>
-      <td>0.00%</td>
+      <td>50.00%</td>
     </tr>
   </tfoot>
 </table>

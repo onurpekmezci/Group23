@@ -4,6 +4,7 @@ import Utilities.GWD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -38,9 +39,13 @@ public class Parent {
 
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+    public void WaitUntilAllVisible(WebElement element) {
+
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfAllElements(element));
 
     }
-
     public void WaitUntilClickable(WebElement element) {
 
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
@@ -53,7 +58,6 @@ public class Parent {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
 
-        GWD.getDriver().switchTo().window(GWD.getDriver().getWindowHandle());
     }
 
     public void VerifyContainsText(WebElement element, String text) {
@@ -67,5 +71,8 @@ public class Parent {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
     }
 
-
+    public void waitUntilTexttobe() {
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+    }
 }
