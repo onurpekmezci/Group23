@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suit_1">
-              <span class="suite-name border-passed">Suit 1</span>
+              <span class="suite-name border-failed">Suit 1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suit_1" class="hide-methods failed suite-Suit_1"> (hide)</a> <!-- hide-methods failed suite-Suit_1 -->
+                      <a href="#" panel-name="suite-Suit_1" class="show-methods failed suite-Suit_1"> (show)</a> <!-- show-methods failed suite-Suit_1 -->
+                    </span>
+                    <div class="method-list-content failed suite-Suit_1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suit_1" title="Runners._08_TestRunnerParallel_MasterReport" hash-for-method="runScenario(&quot;Add-Edit-Delete Departments&quot;, &quot;Add-Edit-Delete Departments under School Setup&quot;)">runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suit_1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -99,6 +113,11 @@
                       <a href="#" panel-name="suite-Suit_1" class="show-methods passed suite-Suit_1"> (show)</a> <!-- show-methods passed suite-Suit_1 -->
                     </span>
                     <div class="method-list-content passed suite-Suit_1">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suit_1" title="Runners._08_TestRunnerParallel_MasterReport" hash-for-method="runScenario(&quot;Add-Edit-Delete Departments&quot;, &quot;Add-Edit-Delete Departments under School Setup&quot;)">runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suit_1" title="Runners._08_TestRunnerParallel_MasterReport" hash-for-method="runScenario(&quot;Login with valid username and password&quot;, &quot;Login Functionality&quot;)">runScenario("Login with valid username and password", "Login Functionality")</a> <!-- method navigator-link -->
@@ -121,12 +140,103 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suit_1" class="panel Suit_1">
+          <div class="suite-Suit_1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Runners._08_TestRunnerParallel_MasterReport</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add-Edit-Delete Departments&quot;, &quot;Add-Edit-Delete Departments under School Setup&quot;)">
+                  </a> <!-- runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//span[contains(text(),&apos;Dashboard&apos;)])[2]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Pages.Parent.WaitUntilVisible(Parent.java:40)
+	at Pages.Parent.VerifyContainsText(Parent.java:60)
+	at Pages.DialogContent.findAndContainsText(DialogContent.java:70)
+	at StepDefinitions.LoginSteps.userShouldLoginSuccessfuly(LoginSteps.java:37)
+	at ?.User should login successfuly(file:///C:/Users/OnurPekmezci/IdeaProjects/Group23_Staj/src/test/java/FeatureFiles/Onur_GIP8_Department.feature:7)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: (//span[contains(text(),&apos;Dashboard&apos;)])[2]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-LHBBFIV&apos;, ip: &apos;192.168.1.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_331&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [51fafcee-cc49-455c-bd8d-1f372cf19fe3, findElement {using=xpath, value=(//span[contains(text(),&apos;Dashboard&apos;)])[2]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0.2, moz:accessibilityChecks: false, moz:buildID: 20220902153754, moz:debuggerAddress: localhost:65177, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17648, moz:profile: C:\Users\ONURPE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65177/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 51fafcee-cc49-455c-bd8d-1f372cf19fe3
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy26.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at Pages.Parent.WaitUntilVisible(Parent.java:40)
+	at Pages.Parent.VerifyContainsText(Parent.java:60)
+	at Pages.DialogContent.findAndContainsText(DialogContent.java:70)
+	at StepDefinitions.LoginSteps.userShouldLoginSuccessfuly(LoginSteps.java:37)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:57)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suit_1-class-failed -->
           <div class="suite-Suit_1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">Runners._08_TestRunnerParallel_MasterReport</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add-Edit-Delete Departments&quot;, &quot;Add-Edit-Delete Departments under School Setup&quot;)">
+                  </a> <!-- runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Login with valid username and password&quot;, &quot;Login Functionality&quot;)">
@@ -219,20 +329,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runners._08_TestRunnerParallel_MasterReport')
-data.setCell(0, 3, 27751);
+data.setCell(0, 3, 43694);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'Runners._08_TestRunnerParallel_MasterReport')
-data.setCell(1, 3, 14652);
+data.setCell(1, 3, 19188);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'Runners._08_TestRunnerParallel_MasterReport')
+data.setCell(2, 3, 18728);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'Runners._08_TestRunnerParallel_MasterReport')
+data.setCell(3, 3, 15905);
 window.suiteTableData['Suit_1']= { tableData: data, tableDiv: 'times-div-Suit_1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suit_1">
               </div> <!-- times-div-Suit_1 -->
             </div> <!-- times-div -->
@@ -260,36 +378,46 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Runners._08_TestRunnerParallel_MasterReport</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@5abca1e0)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@23e028a9)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@6fc6f14e)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@3dd4520b)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass(chrome)</span>
-                <span class="method-start">675 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass(firefox)</span>
-                <span class="method-start">675 ms</span>
+                <span class="method-start">632 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass(chrome)</span>
+                <span class="method-start">633 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with valid username and password", "Login Functionality")</span>
-                <span class="method-start">690 ms</span>
+                <span class="method-start">639 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with valid username and password", "Login Functionality")</span>
-                <span class="method-start">690 ms</span>
+                <span class="method-start">639 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</span>
+                <span class="method-start">19368 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Add-Edit-Delete Departments", "Add-Edit-Delete Departments under School Setup")</span>
+                <span class="method-start">19827 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">15342 ms</span>
+                <span class="method-start">35732 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">28441 ms</span>
+                <span class="method-start">63079 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

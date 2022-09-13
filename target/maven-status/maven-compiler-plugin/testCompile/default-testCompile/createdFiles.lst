@@ -1,0 +1,10 @@
+Pages\Onur_GIP8_Content.class
+Pages\Parent.class
+Utilities\ExcelUtility.class
+Utilities\GWD.class
+Pages\LeftNav.class
+StepDefinitions\Hooks.class
+StepDefinitions\Onur_GIP8_Departments.class
+Pages\DialogContent.class
+StepDefinitions\LoginSteps.class
+Runners\_08_TestRunnerParallel_MasterReport.class
