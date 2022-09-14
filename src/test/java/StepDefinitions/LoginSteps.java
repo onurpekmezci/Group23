@@ -12,7 +12,6 @@ import java.time.Duration;
 public class LoginSteps {
 
     DialogContent dialog = new DialogContent();
-    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 
     @Given("Navigate to basqar")
     public void navigateToBasqar() {

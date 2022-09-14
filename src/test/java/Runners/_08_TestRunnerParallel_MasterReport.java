@@ -17,8 +17,7 @@ public class _08_TestRunnerParallel_MasterReport extends AbstractTestNGCucumberT
 
     @BeforeClass
     @Parameters("browser")
-    public void beforeClass(String browser)
-    {
+    public void beforeClass(String browser){
         GWD.threadBrowserName.set(browser);
          //burada browser set edilecek
         // bu threade browsername set edildi.

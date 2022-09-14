@@ -1,29 +1,28 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
+import Pages.Huseyin_GIP_5_Content;
 import Pages.Parent;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class GIP_5_EditSteps {
-    Parent parent=new Parent();
-    DialogContent dialog=new DialogContent();
-
+   Huseyin_GIP_5_Content HS=new Huseyin_GIP_5_Content();
     @Given("Arrangement of first and last names")
     public void arrangementOfFirstAndLastNames() {
-        dialog.findAndSend("nameInput1","madridista");
-        dialog.findAndClick("searchButton");
-        parent.waitUntilLoading();
-        dialog.findAndClick("editButton");
-        dialog.findAndSend("nameInput2","celtic");
-        dialog.findAndSend("shortName2","rangers");
-        dialog.findAndClick("saveButton");
+        HS.findAndSend("nameInput1","madridista");
+        HS.findAndClick("searchButton");
+        HS.waitUntilLoading();
+        HS.findAndClick("editButton");
+        HS.findAndSend("nameInput2","celtic");
+        HS.findAndSend("shortName2","rangers");
+        HS.findAndClick("saveButton");
 
     }
 
     @Then("Confirmation of successfully")
     public void confirmationOfSuccessfully() {
-        dialog.findAndContainsText("successMessage","successfully");
+        HS.findAndContainsText("successMessage","successfully");
 
     }
 }

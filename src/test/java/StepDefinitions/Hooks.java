@@ -52,8 +52,7 @@ public class Hooks {
         GWD.quitDriver();
     }
 
-    public String getBase64Screenshot()
-    {
+    public String getBase64Screenshot(){
         return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);
     }
 
