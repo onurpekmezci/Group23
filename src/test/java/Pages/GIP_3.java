@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class GIP_3 extends Parent {
+
+    //
     public GIP_3() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
