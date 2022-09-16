@@ -14,7 +14,7 @@ Feature: Add - Edit - Delete Positions Functionality
     Given Clicking on the relevant menu options
     Given Arrangement of first and last names
     Then  Confirmation of successfully
-  @Regression
+  @RegressionTest
     Scenario: Delete and make necessary adjustments
       Given Clicking on the relevant menu options
       When  Execution of deletion

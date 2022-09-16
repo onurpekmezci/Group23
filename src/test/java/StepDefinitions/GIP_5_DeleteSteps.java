@@ -22,4 +22,4 @@ public class GIP_5_DeleteSteps {
     public void deleteAndSuccessfully() {
         HS.findAndContainsText("successMessage","successfully");
     }
-}//
+}

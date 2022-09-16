@@ -24,5 +24,5 @@ public class GIP_5_EditSteps {
     public void confirmationOfSuccessfully() {
         HS.findAndContainsText("successMessage","successfully");
 
-    }//
+    }
 }
