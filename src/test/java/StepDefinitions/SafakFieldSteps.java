@@ -1,4 +1,5 @@
 package StepDefinitions;
+
 import Pages.DialogContent;
 import Pages.LeftNav;
 import Pages.Parent;
@@ -24,53 +25,35 @@ public class SafakFieldSteps extends Parent {
     @When("Create a new Fields")
 
     public void CreateanewFields() {
-
+        waitUntilLoading();
         dc.findAndClick("AddPlus");
         dc.findAndSend("nameInput", "domates");
         dc.findAndSend("codeInput", "314170");
         dc.findAndClick("saveButton");
-        dc.findAndSend("sendSearchName", "Kavuncum");
+        dc.findAndSend("sendSearchName", "domates");
         dc.SearchButton();
-        //waitUntilLoading();
-        dc.editaction();
-        dc.delete2action();
-
 
     }
-
 
 
     @And("Edit a Fields")
     public void editAFields() {
 
-          waitUntilLoading();
-          dc.editaction();
-
-          dc.editaction();
-       // dc.findAndClick("EditButton");
-
-
+        dc.findAndClick("EditButton");
         dc.findAndSend("nameInput", "Tavukcum");
         dc.findAndSend("codeInput", "19235");
-        waitUntilLoading();
         dc.findAndClick("saveButton");
 
 
     }
 
-       @And("Delete a Fields")
-        public void deleteaFields(){
+    @And("Delete a Fields")
+    public void deleteaFields() {
 
-           dc.deleteaction();
-           waitUntilLoading();
-           dc.delete2action();
-           waitUntilLoading();
+        dc.deleteaction();
 
 
-       }
-
-
-
+    }
 
 
 }

@@ -15,9 +15,9 @@ public class GIP3_Edit extends Parent {
     GIP_3 gp=new GIP_3();
     @And("Search on the Document")
     public void SearchOnTheDocument() {
-
-        gp.findAndSend("searchDocument", "ALI");
         waitUntilLoading();
+        gp.findAndSend("searchDocument", "ALI");
+
 
         
     }

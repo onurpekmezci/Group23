@@ -25,7 +25,7 @@ Feature:Add-Edit-Delete Departments under School Setup
     And  Click Save
     And  Verify successfuly
 
-#    # editleme işlemi yapılacağı zmaan açılmalı
+    # editleme işlemi yapılacağı zmaan açılmalı
 #    And Click edit button
 #
 ##     id değiştirmeden value güncellemesi yapmıyor. Already exist uyarısı veriyor. id ve value değiştirdiğinde ise yeni kayır oluşturuyor ve eski kaydı güncellemiyor.

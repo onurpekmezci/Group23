@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeftNav extends Parent {
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     private WebElement myElement;
@@ -50,29 +50,65 @@ public class LeftNav extends Parent {
     @FindBy(xpath = "//span[text()='Departments']")
     private WebElement SchoolDepartments;
 
-//    @FindBy(xpath = "//span[text()='Departments']")
+    //    @FindBy(xpath = "//span[text()='Departments']")
 //    private WebElement Departments;
-
-
-    public void findAndClick(String Strelement)
-    {
-        switch (Strelement)
-        {
-            case "SetupOne": myElement=SetupOne; break;
-            case "Parameters":myElement=Parameters; break;
-            case "Countries" :myElement=Countries; break;
-            case "Citizenships" :myElement=Citizenships; break;
-            case "Nationality" :myElement=nationalities; break;
-            case "Fees" :myElement=Fees; break;
-            case "EntranceExams1" :myElement=EntranceExams1; break;
-            case "EntranceExams2" :myElement=EntranceExams2; break;
-            case "SetupTwo" :myElement=SetupTwo; break;
-            case "HRlink" :myElement=HRlink; break;
-            case "EmployeeLink" :myElement=Employees; break;
-
-            case "SchoolSetup" :myElement=SchoolSetup; break;
-            case "SchoolDepartments" :myElement=SchoolDepartments; break;
-         //   case "Departments" :myElement=Departments; break;
+    @FindBy(xpath = "//span[text()='Fields']")
+    private WebElement Fields;
+    @FindBy(xpath = "//*[text()='Bank Accounts']")
+    private WebElement Bankaccounts;
+    @FindBy(xpath = "//span[text()='Document Types'][1]")
+    private WebElement DocumentTypes;
+    public void findAndClick(String Strelement) {
+        switch (Strelement) {
+            case "SetupOne":
+                myElement = SetupOne;
+                break;
+            case "Parameters":
+                myElement = Parameters;
+                break;
+            case "Countries":
+                myElement = Countries;
+                break;
+            case "Citizenships":
+                myElement = Citizenships;
+                break;
+            case "Nationality":
+                myElement = nationalities;
+                break;
+            case "Fees":
+                myElement = Fees;
+                break;
+            case "EntranceExams1":
+                myElement = EntranceExams1;
+                break;
+            case "EntranceExams2":
+                myElement = EntranceExams2;
+                break;
+            case "SetupTwo":
+                myElement = SetupTwo;
+                break;
+            case "HRlink":
+                myElement = HRlink;
+                break;
+            case "EmployeeLink":
+                myElement = Employees;
+                break;
+            case "Fields":
+                myElement = Fields;
+                break;
+            case "SchoolSetup":
+                myElement = SchoolSetup;
+                break;
+            case "SchoolDepartments":
+                myElement = SchoolDepartments;
+                break;
+            case "Bankaccounts":
+                myElement = Bankaccounts;
+                break;
+                case "DocumentTypes":
+                myElement = DocumentTypes;
+                break;
+            //   case "Departments" :myElement=Departments; break;
 
         }
 

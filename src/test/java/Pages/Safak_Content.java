@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Safak_Content extends Parent{
+public class Safak_Content extends Parent {
 
     public Safak_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -25,9 +25,6 @@ public class Safak_Content extends Parent{
     private WebElement Dashboard;
 
 
-
-
-
     @FindBy(xpath = "//ms-add-button")
     private WebElement AddPlus;
 
@@ -44,7 +41,7 @@ public class Safak_Content extends Parent{
     @FindBy(xpath = "//input[@id='ms-text-field-0']")
     private WebElement sendSearchName;
 
-    @FindBy(xpath = "//span[@class='mat-button-wrapper'][1]")
+    @FindBy(xpath = "//ms-search-button")
     private WebElement SearchButton;
 
     @FindBy(xpath = "//ms-edit-button")
@@ -54,7 +51,7 @@ public class Safak_Content extends Parent{
     private WebElement Delete1Button;
 
 
-    @FindBy(xpath = "//ms-delete-button//button")
+    @FindBy(xpath = "//mat-dialog-actions//button[@type='submit']")
     private WebElement Delete2Button;
 
     private WebElement myElement;
@@ -105,14 +102,14 @@ public class Safak_Content extends Parent{
                 break;
 
             case "EditButton":
-                myElement = SearchButton;
+                myElement = EditButton;
                 break;
 
             case "Delete1Button":
-                myElement = SearchButton;
+                myElement = Delete1Button;
                 break;
             case "Delete2Button":
-                myElement = SearchButton;
+                myElement = Delete2Button;
                 break;
 
         }
@@ -140,24 +137,12 @@ public class Safak_Content extends Parent{
         action.moveToElement(SearchButton).click().build().perform();
     }
 
-    public void editaction() {
-        Actions action = new Actions(GWD.getDriver());
-        action.moveToElement(EditButton).click().build().perform();
+     public void deleteaction() {
 
 
+        WaitUntilClickable(Delete1Button);
+        findAndClick("Delete1Button");
+        findAndClick("Delete2Button");
     }
-
-    public void deleteaction() {
-
-        Actions action = new Actions(GWD.getDriver());
-        action.moveToElement(Delete1Button).click().build().perform();
-    }
-
-    public void delete2action() {
-
-        Actions action = new Actions(GWD.getDriver());
-        action.moveToElement(Delete2Button).click().build().perform();
-    }
-
 
 }

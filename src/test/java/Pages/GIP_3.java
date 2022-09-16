@@ -66,9 +66,12 @@ public class GIP_3 extends Parent {
 
     @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[13]//fa-icon")
     private WebElement deleteDocument;
-
+    @FindBy(xpath = "//div[contains(text(),'successfully')]")
+    private WebElement SuccessDialog;
     @FindBy(xpath = "//span[text()=' Delete ']")
     private WebElement confirmDelete;
+    @FindBy(xpath = "//div//textarea")
+    private WebElement Textarea;
 
     private WebElement myElement;
 
@@ -105,6 +108,7 @@ public class GIP_3 extends Parent {
 
         }
 
+        if(myElement==editDocument ||myElement==deleteDocument ) waitUntilLoading();
 
         clickFunction(myElement);
 
@@ -116,6 +120,7 @@ public class GIP_3 extends Parent {
         switch (strelement) {
 
             case "Dashboard": myElement = Dashboard;break;
+            case "SuccessDialog": myElement = SuccessDialog;break;
 
         }
 
@@ -126,7 +131,6 @@ public class GIP_3 extends Parent {
 
     public void actionEsc() {
         Actions aksiyon = new Actions(GWD.getDriver());
-        aksiyon.moveToElement(stageSertificate).keyDown(Keys.ESCAPE).build().perform();
-
+        aksiyon.moveToElement(saveDocument).click().build().perform();
     }
 }
