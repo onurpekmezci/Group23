@@ -20,6 +20,6 @@ public class GIP_5_DeleteSteps {
 
     @Then("Delete and successfully")
     public void deleteAndSuccessfully() {
-        HS.findAndContainsText("successMessage","successfully");
+        HS.findAndContainsText("successMessage","success");
     }
 }

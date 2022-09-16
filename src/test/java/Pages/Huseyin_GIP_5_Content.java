@@ -46,7 +46,7 @@ public class Huseyin_GIP_5_Content extends Parent {
     @FindBy (xpath = "(//span[@class='mat-button-wrapper'])[12]//fa-icon")
     private WebElement editButton;
 
-    @FindBy (xpath = "(//span[@class='mat-button-wrapper'])[13]//fa-icon")
+    @FindBy (xpath = "//ms-delete-button//button")
     private WebElement deleteButton;
 
     @FindBy (xpath = "//span[contains(text(),'Delete')]")

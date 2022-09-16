@@ -22,7 +22,7 @@ public class GIP_5_EditSteps {
 
     @Then("Confirmation of successfully")
     public void confirmationOfSuccessfully() {
-        HS.findAndContainsText("successMessage","successfully");
+        HS.findAndContainsText("successMessage","success");
 
     }
 }
