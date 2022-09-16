@@ -9,7 +9,7 @@ public class Huseyin_GIP_5_Content extends Parent {
     public Huseyin_GIP_5_Content() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-//------------------------------------------------------------//
+//--------------------------------------------------------------//
     @FindBy(xpath = "//span[text()='Human Resources']")
     private WebElement HumanResources;
 
